@@ -28,7 +28,7 @@ export default function Home() {
 
   return (
     <>
-      <Header />
+      <Header onOpenWizard={() => handleOpenWizard()} />
       <main>
         <HeroSection onOpenWizard={handleOpenWizard} />
         <TrustSection onOpenWizard={() => handleOpenWizard()} />
