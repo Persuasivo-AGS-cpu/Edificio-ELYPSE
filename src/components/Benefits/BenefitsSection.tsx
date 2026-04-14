@@ -65,7 +65,7 @@ export default function BenefitsSection() {
           <div className={styles.premiumTag}>Experiencia AAA</div>
           <h2 className={styles.title}>Todo lo que tu empresa necesita</h2>
           <p className={styles.subtitle}>
-            Una cuota mensual de aproximadamente $12,500 MXN que resuelve tu infraestructura operativa en la zona más exclusiva.
+            Una cuota mensual All-Inclusive que resuelve tu infraestructura operativa en la zona corporativa más exclusiva.
           </p>
         </div>
 
