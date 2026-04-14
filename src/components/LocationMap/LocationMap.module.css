@@ -1,0 +1,120 @@
+.locationSection {
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  background-color: var(--bg-primary);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.mapContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.mapIframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: grayscale(30%) brightness(0.6) contrast(1.2);
+  transform: scale(1.05); /* hide standard borders if any */
+  animation: expensiveDrone 20s ease-in-out infinite;
+  transform-origin: center center;
+}
+
+@keyframes expensiveDrone {
+  0% { transform: scale(1.05) translate(0, 0); }
+  50% { transform: scale(1.25) translate(-2%, -2%); }
+  100% { transform: scale(1.05) translate(0, 0); }
+}
+
+@media (prefers-color-scheme: dark) {
+  .mapIframe {
+    filter: invert(90%) hue-rotate(180deg) brightness(0.7) contrast(1.2); /* Creates a slick dark map from satellite, though satellite is already darkish. Just dark tinted */
+    /* Wait, invert ruins satellite. Let's stick to brightness contrast */
+    filter: brightness(0.5) contrast(1.2) sepia(20%) hue-rotate(-15deg); 
+  }
+}
+
+.mapOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(10,12,16,0.9) 0%, rgba(10,12,16,0.2) 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.contentWrapper {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  padding: var(--spacing-xl) 0;
+}
+
+.glassCard {
+  background: rgba(10, 12, 16, 0.7);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 3rem;
+  border-radius: var(--radius-lg);
+  max-width: 500px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.premiumTag {
+  display: inline-block;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(196, 167, 125, 0.3);
+  padding: 0.25rem 0.75rem;
+  border-radius: 100px;
+}
+
+.title {
+  font-size: 2.25rem;
+  color: #fff;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.address {
+  font-size: 1.125rem;
+  color: #E5E7EB;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--accent-gold);
+}
+
+.highlights {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.highlights li {
+  color: #9CA3AF;
+  font-size: 1rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.bullet {
+  color: var(--accent-gold);
+  margin-right: 0.75rem;
+  font-weight: bold;
+}
