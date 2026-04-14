@@ -12,7 +12,7 @@ const benefits = [
   },
   {
     title: "Vistas y Altura",
-    desc: "Plataformas de enfoque con vistas espectaculares hacia la Sierra Madre y Valle Oriente. Cero distracciones estilo coworking.",
+    desc: "Plataformas de trabajo con vistas panorámicas al corazón de San Pedro y al imponente perfil de la sierra. Cero distracciones estilo coworking.",
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path d="M18 20V6a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14"></path><path d="M2 20h20"></path><path d="M14 12v.01"></path>
