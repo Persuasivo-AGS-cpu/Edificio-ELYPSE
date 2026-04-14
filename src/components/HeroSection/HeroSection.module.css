@@ -31,7 +31,7 @@
 .heroContent {
   position: relative;
   z-index: 2;
-  padding-top: 80px; /* Offset for header */
+  padding-top: 140px; /* Offset for header + extra breathing room for the badge */
 }
 
 .textContent {

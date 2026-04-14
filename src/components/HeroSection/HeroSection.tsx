@@ -17,7 +17,7 @@ export default function HeroSection({ onOpenWizard }: { onOpenWizard: (interest?
         <div className={styles.textContent}>
           <div className={styles.badge}>
             <span className={styles.pulseDot}></span>
-            Sólo 14 Oficinas Disponibles
+            Sólo 9 Oficinas Disponibles
           </div>
           <h1 className={styles.title}>
             Tu Domicilio Fiscal y Oficina Privada en San Pedro Garza García.

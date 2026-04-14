@@ -2,7 +2,7 @@ import styles from "./LocationMap.module.css";
 
 export default function LocationMap() {
   return (
-    <section className={styles.locationSection}>
+    <section id="ubicacion" className={styles.locationSection}>
       <div className={styles.mapContainer}>
         {/* Google Maps Embed in Satellite Mode (t=k) */}
         <iframe 
