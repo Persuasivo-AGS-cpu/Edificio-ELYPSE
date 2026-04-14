@@ -20,8 +20,8 @@ const benefits = [
     ),
   },
   {
-    title: "Cajón VIP + Visitas Garantizadas",
-    desc: "Tu propio cajón ejecutivo reservado 24/7. Y la tranquilidad de contar con amplio estacionamiento exterior para que tus clientes jamás batallen.",
+    title: "1 Cajón Asignado + Visitas",
+    desc: "Tu propio espacio de estacionamiento personal y asignado 24/7. Además, área exterior amplia para que tus clientes y visitas no batallen al llegar.",
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M9 17V7h4a3 3 0 0 1 0 6H9"></path>
