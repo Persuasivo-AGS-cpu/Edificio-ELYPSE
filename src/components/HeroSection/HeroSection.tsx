@@ -20,7 +20,7 @@ export default function HeroSection({ onOpenWizard }: { onOpenWizard: (interest?
             Sólo 9 Oficinas Disponibles
           </div>
           <h1 className={styles.title}>
-            Tu Domicilio Fiscal y Oficina Privada en San Pedro Garza García.
+            Tu Oficina Privada con Domicilio Fiscal en San Pedro Garza García.
           </h1>
           <p className={styles.subtitle}>
             Oficinas individuales para máximo enfoque o renta exclusiva de Domicilio Fiscal para proyectar la mejor imagen ante tus clientes y el SAT.

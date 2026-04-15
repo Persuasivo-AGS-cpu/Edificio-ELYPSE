@@ -39,7 +39,7 @@ const benefits = [
   },
   {
     title: "Modelado All-Inclusive",
-    desc: "Olvídate de recibos de CFE caros. En Elypse el servicio de luz comercial, agua, seguridad y mantenimiento mensual ya están cubiertos.",
+    desc: "Olvídate de recibos y rentas sombra. Tu cuota mensual incluye: renta, mantenimiento mensual, luz y clima de tu oficina privada, internet, 1 estacionamiento y acceso a salas de juntas.",
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>

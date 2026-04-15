@@ -19,7 +19,7 @@ export default function PricingStripe({ onOpenWizard }: PricingStripeProps) {
             Tarifa All-Inclusive: <span className={styles.price}>$12,500</span> <span className={styles.currency}>MXN</span>
           </h2>
           <p className={styles.subtitle}>
-            Una cuota mensual congelada que internaliza renta, mantenimientos, consumo CFE y 1 Cajón Asignado. Cero rentas sombra.
+            Una cuota mensual congelada que incluye todo: renta, mantenimiento, luz y clima de tu oficina, internet, estacionamiento y salas de juntas.
           </p>
         </div>
         <div className={styles.action}>

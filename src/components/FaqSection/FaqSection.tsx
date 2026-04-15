@@ -56,7 +56,7 @@ const faqs = [
   {
     category: "Domicilio Fiscal",
     q: "¿Puedo usar esta dirección como mi Domicilio Fiscal ante el SAT?",
-    a: "Es nuestra mayor ventaja competitiva. Al firmar el contrato, obtienes el derecho y los comprobantes legítimos para domiciliar tu empresa o razón social aquí, dándote credibilidad inmediata. 👉 Agenda una cita para iniciar tu alta.",
+    a: "Es nuestra mayor ventaja competitiva. Al firmar el contrato, obtienes el derecho y los comprobantes legítimos para domiciliar tu empresa o razón social aquí, dándote credibilidad inmediata. Contamos con guardias en recepción las 24 horas del día, los 7 días de la semana, que sirven para recibir correspondencia o notificaciones en el domicilio fiscal. 👉 Agenda una cita para iniciar tu alta.",
     tags: ["sat", "fiscal", "domicilio", "direccion", "dirección", "facturacion", "hacienda", "rfc", "alta"]
   },
   {
@@ -82,7 +82,7 @@ const faqs = [
   {
     category: "Instalaciones",
     q: "¿De qué tamaño son las oficinas y cuánta gente cabe?",
-    a: "Son espacios diseñados para alto enfoque de 3x3 metros con espectaculares alturas libres de 3 metros, perfectos para un ejecutivo principal y hasta 2 visitas, o para ti y un socio.",
+    a: "Son espacios diseñados para alto enfoque de 3.5 x 3.5 metros con espectaculares alturas libres de 3 metros, perfectos para un ejecutivo principal y hasta 2 visitas, o para ti y un socio.",
     tags: ["tamaño", "medidas", "metros", "espacio", "cabemos", "personas", "grande"]
   },
   {
@@ -113,9 +113,9 @@ const faqs = [
   // 🛡 Privacidad, Seguridad y Tecnología
   {
     category: "Seguridad",
-    q: "¿El servicio de internet de alta velocidad viene incluido?",
-    a: "Es el ÚNICO servicio que omitimos estratégicamente por tu Ciberseguridad. Preferimos que cada inquilino de alto perfil instale su propia línea privada de internet para evitar intrusiones o robo de datos mediante IPs compartidas (Hackeos de coworking).",
-    tags: ["internet", "wifi", "conexion", "red", "fibra", "velocidad", "megas", "ciberseguridad"]
+    q: "¿El servicio de internet y clima viene incluido?",
+    a: "Sí, tu renta incluye todo lo necesario para operar sin rentas sombra: internet de alta velocidad, consumo de luz, clima de tu oficina privada, mantenimiento externo, un cajón de estacionamiento y acceso a salas de juntas.",
+    tags: ["internet", "wifi", "conexion", "red", "fibra", "velocidad", "megas", "clima", "aire"]
   },
   {
     category: "Seguridad",
