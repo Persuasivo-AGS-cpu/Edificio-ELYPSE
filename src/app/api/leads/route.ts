@@ -45,6 +45,7 @@ _Fecha: ${new Date().toLocaleString('es-MX')}_
     url.searchParams.append('name', cardName);
     url.searchParams.append('desc', cardDescription);
     url.searchParams.append('pos', 'top');
+    url.searchParams.append('idLabels', '692e58c4412d7d0ac3d74774'); // Label Azul "Frio"
 
     const response = await fetch(url.toString(), {
       method: 'POST',
