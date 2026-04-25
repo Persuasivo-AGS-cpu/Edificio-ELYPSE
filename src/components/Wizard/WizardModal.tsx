@@ -58,6 +58,9 @@ export default function WizardModal({ onClose, initialStep = 0, initialData = {}
       });
       
       if (response.ok) {
+        if (typeof window !== "undefined" && (window as any).fbq) {
+          (window as any).fbq('track', 'Lead');
+        }
         setIsSuccess(true);
       } else {
         alert("Ocurrió un error al enviar tu solicitud. Intenta de nuevo.");
