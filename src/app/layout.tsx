@@ -55,7 +55,7 @@ export default function RootLayout({
         </Script>
         {/* Chatbot Asesor Persuasivo */}
         <Script 
-          src="http://localhost:6001/widget.js?v=3" 
+          src="https://persuasivo-chatbot-admin-panel-d73d.vercel.app/widget.js" 
           strategy="afterInteractive"
           data-client-id="f616f5ce-ce68-4f9d-a4d8-7ca6ba8ac9b6"
         />
