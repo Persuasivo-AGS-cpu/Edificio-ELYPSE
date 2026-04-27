@@ -46,7 +46,7 @@ export default function RootLayout({
           `}
         </Script>
         {/* Chatbot Asesor Persuasivo */}
-        <Script src="/widget.js" strategy="lazyOnload" />
+        <Script src="/widget.js" data-client-id="f616f5ce-ce68-4f9d-a4d8-7ca6ba8ac9b6" strategy="lazyOnload" />
       </head>
       <body>
         {children}
