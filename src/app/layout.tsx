@@ -13,6 +13,14 @@ export const metadata: Metadata = {
   description: "Espacios profesionales con dirección fiscal en una de las zonas corporativas más importantes de Monterrey.",
 };
 
+import { Viewport } from "next";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -46,7 +54,11 @@ export default function RootLayout({
           `}
         </Script>
         {/* Chatbot Asesor Persuasivo */}
-        <Script src="https://persuasivo-chatbot-admin-panel-d73d.vercel.app/widget.js" data-client-id="f616f5ce-ce68-4f9d-a4d8-7ca6ba8ac9b6" strategy="lazyOnload" />
+        <Script 
+          src="http://localhost:6001/widget.js?v=3" 
+          strategy="afterInteractive"
+          data-client-id="f616f5ce-ce68-4f9d-a4d8-7ca6ba8ac9b6"
+        />
       </head>
       <body>
         {children}
