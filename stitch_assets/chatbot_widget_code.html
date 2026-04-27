@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#f0f1f2",
+                        "surface-dim": "#d9dadb",
+                        "inverse-surface": "#2e3132",
+                        "on-tertiary-container": "#ffc9b3",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "on-secondary-fixed-variant": "#404758",
+                        "surface-container": "#edeeef",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed": "#ffdbcd",
+                        "tertiary-container": "#9f3d01",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#e1e3e4",
+                        "secondary-fixed": "#dbe2f8",
+                        "outline-variant": "#c2c6d5",
+                        "primary-fixed": "#d8e2ff",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#e7e8e9",
+                        "primary-fixed-dim": "#adc6ff",
+                        "inverse-primary": "#adc6ff",
+                        "surface": "#f8f9fa",
+                        "on-error-container": "#93000a",
+                        "primary-container": "#0058be",
+                        "surface-container-low": "#f3f4f5",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed-variant": "#7c2e00",
+                        "on-primary-fixed": "#001a42",
+                        "on-background": "#191c1d",
+                        "surface-container-highest": "#e1e3e4",
+                        "error": "#ba1a1a",
+                        "secondary-container": "#dbe2f8",
+                        "secondary": "#575e70",
+                        "on-surface-variant": "#424753",
+                        "primary": "#004191",
+                        "background": "#f8f9fa",
+                        "on-primary-container": "#c4d5ff",
+                        "tertiary": "#792c00",
+                        "secondary-fixed-dim": "#bfc6db",
+                        "on-tertiary-fixed": "#360f00",
+                        "on-surface": "#191c1d",
+                        "on-primary-fixed-variant": "#004395",
+                        "outline": "#727784",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed": "#141b2b",
+                        "on-secondary-container": "#5d6476",
+                        "surface-tint": "#085ac0",
+                        "surface-bright": "#f8f9fa"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter-md": "24px",
+                        "section-margin": "40px",
+                        "gutter-lg": "32px",
+                        "container-padding": "32px",
+                        "sidebar-width": "260px",
+                        "unit": "4px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Manrope"],
+                        "label-xs": ["Manrope"],
+                        "label-md": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "h1": ["Manrope"],
+                        "h3": ["Manrope"],
+                        "h2": ["Manrope"],
+                        "caption": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "label-xs": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "h1": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "h3": ["18px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "h2": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "caption": ["10px", {"lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-image: linear-gradient(135deg, #f8f9fa 0%, #e2e8f0 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md text-on-surface bg-background min-h-screen flex items-center justify-center p-4">
+<!-- Chat Widget Container -->
+<div class="relative w-full max-w-[420px] h-[720px] flex flex-col bg-surface-container-lowest shadow-2xl rounded-xl overflow-hidden border border-outline-variant">
+<!-- TopAppBar (Shared Component Logic) -->
+<header class="bg-white/80 backdrop-blur-md flex items-center justify-between px-4 py-3 w-full rounded-t-lg border-b border-slate-200 shadow-sm">
+<div class="flex items-center gap-3">
+<div class="relative">
+<img alt="Aurora AI Profile" class="w-10 h-10 rounded-full object-cover border border-primary/10" data-alt="abstract flowing 3D liquid chrome shapes with soft blue and silver gradients against a clean white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwD0idbqti3sFMtSBSApLQIE9efrFnxv5qWiLKsEW4LJeAvB0CoG56_pFf9ayl1El3djBBba_5Pizj-aEAe3JNkBFcjUFpuolbu_wAdhpUOZNiuT81JF6Tj0U8g2u3ZqF2DoiVQdkvyelq4JsaZT0NDLl_eEnDvjaiqLqrSxUDmmzcOmAzvrO0jOb8x1cv1DZ9eBNJHVF6ufpJRxfDTw2GimJJomKDMj7vb79qaY9AadhOVtsR_hAV2TAXyajM7WQBfcfucP1J3bnT"/>
+<span class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full"></span>
+</div>
+<div>
+<h1 class="font-manrope text-sm font-bold tracking-tight text-primary">Aurora</h1>
+<p class="text-[10px] text-secondary font-medium uppercase tracking-wider">Online</p>
+</div>
+</div>
+<button class="text-slate-500 hover:bg-slate-100 transition-colors p-2 rounded-full">
+<span class="material-symbols-outlined">close</span>
+</button>
+</header>
+<!-- Chat Area -->
+<main class="flex-1 overflow-y-auto p-gutter-md flex flex-col gap-4 bg-surface">
+<!-- Timestamp -->
+<div class="flex justify-center my-2">
+<span class="text-caption text-outline px-3 py-1 bg-surface-container rounded-full">HOY</span>
+</div>
+<!-- Bot Message -->
+<div class="flex gap-3 max-w-[85%]">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary-fixed-dim flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[18px]">auto_awesome</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="bg-white p-3 rounded-tr-xl rounded-br-xl rounded-bl-xl border border-outline-variant shadow-sm">
+<p class="font-body-md text-on-surface">Hola, soy Aurora. ¿Cómo puedo asistirte hoy con los servicios de Persuasivo OS?</p>
+</div>
+<span class="text-[10px] text-outline ml-1">10:24 AM</span>
+</div>
+</div>
+<!-- User Message -->
+<div class="flex flex-row-reverse gap-3 max-w-[85%] self-end">
+<div class="flex flex-col items-end gap-1">
+<div class="bg-primary text-on-primary p-3 rounded-tl-xl rounded-bl-xl rounded-br-xl shadow-sm">
+<p class="font-body-md">Me gustaría conocer los planes disponibles.</p>
+</div>
+<span class="text-[10px] text-outline mr-1">10:25 AM</span>
+</div>
+</div>
+<!-- Bot Message with Options -->
+<div class="flex gap-3 max-w-[85%]">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary-fixed-dim flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[18px]">auto_awesome</span>
+</div>
+<div class="flex flex-col gap-3">
+<div class="bg-white p-3 rounded-tr-xl rounded-br-xl rounded-bl-xl border border-outline-variant shadow-sm">
+<p class="font-body-md text-on-surface">Excelente elección. Contamos con soluciones adaptadas a cada etapa de crecimiento empresarial. Aquí tienes acceso directo:</p>
+</div>
+<!-- Quick Prompts (Pill Chips) -->
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-2 bg-white border border-primary/20 text-primary font-label-md rounded-full hover:bg-primary-fixed transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">sell</span>
+                            Ver precios
+                        </button>
+<button class="px-4 py-2 bg-white border border-primary/20 text-primary font-label-md rounded-full hover:bg-primary-fixed transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">event</span>
+                            Agendar cita
+                        </button>
+<button class="px-4 py-2 bg-white border border-primary/20 text-primary font-label-md rounded-full hover:bg-primary-fixed transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+                            Ubicación
+                        </button>
+</div>
+</div>
+</div>
+</main>
+<!-- Input Area -->
+<footer class="p-4 bg-white border-t border-slate-200">
+<div class="flex items-end gap-2 bg-surface-container-low rounded-xl p-2 border border-outline-variant focus-within:border-primary/40 focus-within:ring-1 focus-within:ring-primary/40 transition-all">
+<button class="p-2 text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined">attach_file</span>
+</button>
+<textarea class="flex-1 bg-transparent border-none focus:ring-0 py-2 text-body-md resize-none max-h-32" placeholder="Escribe un mensaje..." rows="1"></textarea>
+<button class="bg-primary text-on-primary w-10 h-10 rounded-lg flex items-center justify-center hover:opacity-90 active:scale-95 transition-all">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+<!-- Shared Component Footer Text -->
+<div class="mt-3 flex justify-center">
+<div class="flex items-center gap-1.5 opacity-60">
+<span class="font-bold text-primary text-[10px]">Persuasivo OS</span>
+<span class="text-[10px] text-slate-500 uppercase tracking-tighter">Powered by AI</span>
+</div>
+</div>
+</footer>
+<!-- Floating Badge Style (Contextual Visual) -->
+<div class="absolute -bottom-16 right-0 md:static md:mt-4 flex flex-col items-end">
+<!-- This space mimics where the trigger button would be if collapsed -->
+</div>
+</div>
+<!-- Background Decoration for Context -->
+<div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+<div class="absolute top-[-10%] right-[-5%] w-[40%] h-[40%] bg-primary/5 blur-[120px] rounded-full"></div>
+<div class="absolute bottom-[-10%] left-[-5%] w-[30%] h-[30%] bg-secondary/5 blur-[100px] rounded-full"></div>
+</div>
+</body></html>
