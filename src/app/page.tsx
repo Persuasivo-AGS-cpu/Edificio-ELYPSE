@@ -9,6 +9,7 @@ import SpaceSpecsSection from "../components/SpaceSpecs/SpaceSpecsSection";
 import BenefitsSection from "../components/Benefits/BenefitsSection";
 import PricingStripe from "../components/PricingStripe/PricingStripe";
 import FaqSection from "../components/FaqSection/FaqSection";
+import FinalCTA from "../components/FinalCTA/FinalCTA";
 import Footer from "../components/Footer/Footer";
 import WizardModal from "../components/Wizard/WizardModal";
 import { LeadData } from "../types";
@@ -37,6 +38,7 @@ export default function Home() {
         <BenefitsSection />
         <PricingStripe onOpenWizard={handleOpenWizard} />
         <FaqSection />
+        <FinalCTA />
       </main>
       <Footer />
 

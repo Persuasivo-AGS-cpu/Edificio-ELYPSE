@@ -9,7 +9,7 @@ const steps = [
   { id: 'urgency', question: '¿Cuándo necesitas el espacio?' },
   { id: 'budget', question: '¿Qué presupuesto tienes para oficina?' },
   { id: 'parking', question: '¿Necesitas estacionamiento?' },
-  { id: 'contact', question: 'Inscripción para Visita VIP' }
+  { id: 'contact', question: 'Inscripción para Visita' }
 ];
 
 export default function WizardModal({ onClose, initialStep = 0, initialData = {} }: { onClose: () => void, initialStep?: number, initialData?: Partial<LeadData> }) {
