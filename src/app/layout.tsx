@@ -45,6 +45,8 @@ export default function RootLayout({
             fbq('track', 'PageView');
           `}
         </Script>
+        {/* Chatbot Asesor Persuasivo */}
+        <Script src="/widget.js" strategy="lazyOnload" />
       </head>
       <body>
         {children}
