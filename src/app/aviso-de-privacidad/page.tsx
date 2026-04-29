@@ -29,7 +29,7 @@ export default function AvisoPrivacidad() {
               <p>Para llevar a cabo las finalidades descritas en el presente aviso de privacidad, utilizaremos los siguientes datos personales:</p>
               <ul>
                 <li>Nombre completo</li>
-                <li>Teléfono (WhatsApp)</li>
+                <li>Teléfono</li>
                 <li>Correo electrónico</li>
                 <li>Intereses comerciales (ej. Domicilio Fiscal, Oficinas Privadas)</li>
               </ul>
@@ -41,7 +41,7 @@ export default function AvisoPrivacidad() {
               <ul>
                 <li>Contactarle para brindar información sobre oficinas, espacios comerciales y arrendamientos.</li>
                 <li>Agendar visitas y recorridos a nuestras instalaciones.</li>
-                <li>Enviar cotizaciones y dar seguimiento a su solicitud a través de correo o WhatsApp.</li>
+                <li>Enviar cotizaciones y dar seguimiento a su solicitud a través de correo o teléfono.</li>
                 <li>Elaboración de contratos de arrendamiento o servicios de domicilio fiscal.</li>
               </ul>
             </section>

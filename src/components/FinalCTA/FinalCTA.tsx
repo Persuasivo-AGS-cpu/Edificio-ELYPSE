@@ -73,7 +73,7 @@ export default function FinalCTA() {
               <form onSubmit={handleSubmit} className={styles.contactForm}>
                 <input required placeholder="Nombre completo" className={styles.input} type="text" onChange={e => setFormData({...formData, name: e.target.value})} />
                 <input required placeholder="Empresa / Negocio" className={styles.input} type="text" onChange={e => setFormData({...formData, company: e.target.value})} />
-                <input required placeholder="Teléfono / WhatsApp" className={styles.input} type="tel" onChange={e => setFormData({...formData, phone: e.target.value})} />
+                <input required placeholder="Teléfono" className={styles.input} type="tel" onChange={e => setFormData({...formData, phone: e.target.value})} />
                 <input required placeholder="Correo electrónico" className={styles.input} type="email" onChange={e => setFormData({...formData, email: e.target.value})} />
                 <textarea placeholder="Comentarios adicionales (opcional)" className={styles.textarea} onChange={e => setFormData({...formData, comments: e.target.value})}></textarea>
                 
