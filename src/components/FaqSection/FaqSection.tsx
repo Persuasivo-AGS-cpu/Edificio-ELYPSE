@@ -16,7 +16,7 @@ const faqs = [
   {
     category: "Ubicación",
     q: "¿Cómo llego al edificio?",
-    a: "Tienes acceso inmediato por Av. Lázaro Cárdenas, ingresando hacia Residencial Santa Bárbara. Al subir, notarás la privacidad absoluta de la zona, aislada del tráfico denso. 👉 Agenda un recorrido para enviarte la ubicación exacta por teléfono o correo.",
+    a: "Tienes acceso inmediato por Av. Lázaro Cárdenas, ingresando hacia Residencial Santa Bárbara. Al subir, notarás la privacidad absoluta de la zona, aislada del tráfico denso. 👉 Agenda un recorrido para enviarte la ubicación exacta por WhatsApp.",
     tags: ["llegar", "llegada", "ruta", "camino", "vialidad", "trafico"]
   },
 
@@ -24,7 +24,7 @@ const faqs = [
   {
     category: "Precios",
     q: "¿Cuál es el precio exacto de la renta mensual?",
-    a: "Nuestras oficinas privadas mantienen un estándar directivo desde $12,500 MXN mensuales. Un formato All-Inclusive que elimina sorpresas administrativas. 👉 Interactúa con nuestro chat para consultar disponibilidad actual.",
+    a: "Nuestras oficinas privadas mantienen un estándar directivo desde $12,500 MXN mensuales. Un formato All-Inclusive que elimina sorpresas administrativas. 👉 Da clic en el botón flotante de WhatsApp para consultar disponibilidad actual.",
     tags: ["precio", "costo", "cuota", "renta", "cobro", "mensualidad", "pagar", "dinero"]
   },
   {
@@ -127,9 +127,9 @@ const faqs = [
   // 🚀 Cierres y Contacto Inmediato
   {
     category: "Contacto",
-    q: "¿Cuál es su teléfono de contacto o chat directo?",
-    a: "¡Estamos listos para atenderte! Haz clic en el asistente de inteligencia artificial en la esquina de tu pantalla o utiliza el buscador inteligente para comunicarte directamente con Ventas.",
-    tags: ["telefono", "teléfono", "celular", "chat", "llamar", "marcar", "numero", "contacto"]
+    q: "¿Cuál es su teléfono de contacto o WhatsApp directo?",
+    a: "¡Estamos listos para atenderte! Haz clic en el círculo flotante de WhatsApp en la esquina de tu pantalla o utiliza el widget animado en la parte superior para comunicarte directamente con Ventas.",
+    tags: ["telefono", "teléfono", "celular", "whatsapp", "llamar", "marcar", "numero", "contacto"]
   },
   {
     category: "Contacto",
@@ -141,7 +141,7 @@ const faqs = [
 
 const placeholderPhrases = [
   "Ej. ¿Puedo usarlo de Domicilio Fiscal?",
-  "Ej. ¿Cuál es su número de teléfono o chat?",
+  "Ej. ¿Cuál es su número de teléfono o WhatsApp?",
   "Ej. ¿El precio incluye el recibo de la luz?",
   "Ej. ¿Tienen estacionamiento para mis visitas?",
   "Ej. ¿Cómo puedo llegar a las oficinas?",
@@ -311,7 +311,7 @@ export default function FaqSection() {
           ) : (
             <div className={styles.noResults}>
               <p>No encontramos una respuesta exacta para &quot;{searchTerm}&quot;.</p>
-              <p className={styles.noResultsSub}>Usa nuestro widget inicial o contáctanos por chat para resolverlo de inmediato.</p>
+              <p className={styles.noResultsSub}>Usa nuestro widget inicial o contáctanos por WhatsApp para resolverlo de inmediato.</p>
             </div>
           )}
         </div>
