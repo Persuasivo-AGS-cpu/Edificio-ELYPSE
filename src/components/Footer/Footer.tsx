@@ -23,7 +23,7 @@ export default function Footer() {
       </div>
       <div className={styles.bottomBar}>
         <div className="container">
-          <p>&copy; {currentYear} Edificio Elypse. Todos los derechos reservados.</p>
+          <p>&copy; {currentYear} Edificio Elypse. Todos los derechos reservados. | Desarrollado por <a href="https://www.persuasivo.mx" target="_blank" rel="noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>Persuasivo MKT</a></p>
         </div>
       </div>
     </footer>
