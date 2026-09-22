@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
+import WhatsAppButton from "@/components/WhatsAppButton/WhatsAppButton";
 import "./globals.css";
 
 const inter = Inter({
@@ -53,15 +54,10 @@ export default function RootLayout({
             fbq('track', 'PageView');
           `}
         </Script>
-        {/* Chatbot Asesor Persuasivo */}
-        <Script 
-          src="https://persuasivo-chatbot-admin-panel-d73d.vercel.app/widget.js" 
-          strategy="afterInteractive"
-          data-client-id="f616f5ce-ce68-4f9d-a4d8-7ca6ba8ac9b6"
-        />
       </head>
       <body>
         {children}
+        <WhatsAppButton />
         <noscript>
           <img
             height="1"
