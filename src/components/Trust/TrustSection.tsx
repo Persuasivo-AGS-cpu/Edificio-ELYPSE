@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styles from "./TrustSection.module.css";
 
 export default function TrustSection({ onOpenWizard }: { onOpenWizard: () => void }) {
@@ -46,9 +47,11 @@ export default function TrustSection({ onOpenWizard }: { onOpenWizard: () => voi
         <div className={styles.imageColumn}>
           <div className={styles.imageWrapper}>
              {/* Imagen Real del Edificio */}
-            <img 
-              src="/images/exterior.jpg" 
-              alt="Exterior Corporativo de Edificio Elypse" 
+            <Image
+              src="/images/exterior.jpg"
+              alt="Exterior Corporativo de Edificio Elypse"
+              fill
+              sizes="(max-width: 992px) 100vw, 50vw"
               className={styles.image}
             />
           </div>

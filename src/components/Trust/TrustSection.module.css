@@ -113,6 +113,7 @@
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   position: relative;
+  aspect-ratio: 4/5;
 }
 
 .imageWrapper::after {
@@ -128,9 +129,5 @@
 }
 
 .image {
-  width: 100%;
-  height: auto;
-  display: block;
   object-fit: cover;
-  aspect-ratio: 4/5;
 }

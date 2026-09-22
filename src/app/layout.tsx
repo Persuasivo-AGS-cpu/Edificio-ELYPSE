@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
 import WhatsAppButton from "@/components/WhatsAppButton/WhatsAppButton";
@@ -9,12 +9,52 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+const SITE_URL = "https://edificio-elypse.vercel.app";
+const TITLE = "Edificio Elypse | Oficinas Privadas en San Pedro";
+const DESCRIPTION = "Espacios profesionales con dirección fiscal en una de las zonas corporativas más importantes de Monterrey.";
+
 export const metadata: Metadata = {
-  title: "Edificio Elypse | Oficinas Privadas en San Pedro",
-  description: "Espacios profesionales con dirección fiscal en una de las zonas corporativas más importantes de Monterrey.",
+  metadataBase: new URL(SITE_URL),
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: "/",
+    siteName: "Edificio Elypse",
+    locale: "es_MX",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+  },
 };
 
-import { Viewport } from "next";
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "RealEstateAgent",
+  name: "Edificio Elypse",
+  description: DESCRIPTION,
+  url: SITE_URL,
+  telephone: "+528111062487",
+  priceRange: "$12,500 MXN",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "San Alberto Ote. 301, Residencial Santa Bárbara",
+    addressLocality: "San Pedro Garza García",
+    addressRegion: "Nuevo León",
+    addressCountry: "MX",
+  },
+};
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -30,6 +70,10 @@ export default function RootLayout({
   return (
     <html lang="es-MX" className={`${inter.variable}`}>
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
         {/* Google tag (gtag.js) */}
         <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-RKF9KT19CL" />
         <Script id="google-analytics" strategy="afterInteractive">
