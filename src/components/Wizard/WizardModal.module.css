@@ -11,6 +11,11 @@
   align-items: center;
   justify-content: center;
   padding: var(--spacing-sm);
+  animation: overlayIn 0.25s ease-out;
+}
+
+.overlay.closing {
+  animation: overlayOut 0.2s ease-in forwards;
 }
 
 .modal {
@@ -23,6 +28,48 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  animation: modalIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal.closing {
+  animation: modalOut 0.2s ease-in forwards;
+}
+
+@keyframes overlayIn {
+  from { opacity: 0; backdrop-filter: blur(0); }
+  to { opacity: 1; backdrop-filter: blur(4px); }
+}
+
+@keyframes overlayOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes modalIn {
+  from { opacity: 0; transform: scale(0.95) translateY(12px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes modalOut {
+  from { opacity: 1; transform: scale(1) translateY(0); }
+  to { opacity: 0; transform: scale(0.97) translateY(6px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .overlay, .modal {
+    animation: opacityIn 0.15s ease;
+  }
+  .overlay.closing, .modal.closing {
+    animation: opacityOut 0.15s ease forwards;
+  }
+  @keyframes opacityIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes opacityOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
 }
 
 .closeBtn {
@@ -40,6 +87,11 @@
 
 .closeBtn:hover {
   color: var(--text-primary);
+}
+
+.closeBtn:active {
+  transform: scale(0.9);
+  transition: transform 0.1s ease-out;
 }
 
 .header {
@@ -105,6 +157,11 @@
   background: rgba(196, 167, 125, 0.05);
 }
 
+.optionBtn:active {
+  transform: scale(0.98);
+  transition: transform 0.1s ease-out;
+}
+
 .contactForm {
   display: flex;
   flex-direction: column;
@@ -157,6 +214,11 @@
 .primaryBtn:hover:not(:disabled) {
   opacity: 0.9;
   transform: translateY(-2px);
+}
+
+.primaryBtn:active:not(:disabled) {
+  transform: scale(0.97);
+  transition: transform 0.1s ease-out;
 }
 
 .primaryBtn:disabled {

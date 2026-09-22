@@ -33,6 +33,13 @@
   100% { transform: scale(1.05) translate(0, 0); }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .mapIframe {
+    animation: none;
+    transform: scale(1.05);
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   .mapIframe {
     filter: invert(90%) hue-rotate(180deg) brightness(0.7) contrast(1.2); /* Creates a slick dark map from satellite, though satellite is already darkish. Just dark tinted */

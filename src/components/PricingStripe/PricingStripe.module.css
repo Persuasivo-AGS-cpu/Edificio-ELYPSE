@@ -112,3 +112,8 @@
   background: #000000;
   border-color: var(--accent-gold);
 }
+
+.ctaButton:active {
+  transform: scale(0.97);
+  transition: transform 0.1s ease-out;
+}

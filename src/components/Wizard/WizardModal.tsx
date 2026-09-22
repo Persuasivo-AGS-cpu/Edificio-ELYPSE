@@ -12,11 +12,19 @@ const steps = [
   { id: 'contact', question: 'Inscripción para Visita' }
 ];
 
+const CLOSE_ANIMATION_MS = 200;
+
 export default function WizardModal({ onClose, initialStep = 0, initialData = {} }: { onClose: () => void, initialStep?: number, initialData?: Partial<LeadData> }) {
   const [currentStep, setCurrentStep] = useState(initialStep);
   const [formData, setFormData] = useState<Partial<LeadData>>(initialData);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
+
+  const handleClose = () => {
+    setIsClosing(true);
+    setTimeout(onClose, CLOSE_ANIMATION_MS);
+  };
 
   // Prevent background scrolling
   useEffect(() => {
@@ -24,6 +32,15 @@ export default function WizardModal({ onClose, initialStep = 0, initialData = {}
     return () => {
       document.body.style.overflow = "auto";
     };
+  }, []);
+
+  // Esc dismisses, matching the close button
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") handleClose();
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
   const handleSelect = (field: keyof LeadData, value: string) => {
@@ -76,16 +93,19 @@ export default function WizardModal({ onClose, initialStep = 0, initialData = {}
   const progressPercentage = ((currentStep) / (steps.length - 1)) * 100;
 
   return (
-    <div className={styles.overlay}>
-      <div className={styles.modal}>
-        <button className={styles.closeBtn} onClick={onClose}>&times;</button>
-        
+    <div
+      className={`${styles.overlay} ${isClosing ? styles.closing : ''}`}
+      onClick={(e) => { if (e.target === e.currentTarget) handleClose(); }}
+    >
+      <div className={`${styles.modal} ${isClosing ? styles.closing : ''}`}>
+        <button className={styles.closeBtn} onClick={handleClose}>&times;</button>
+
         {isSuccess ? (
           <div className={styles.successState}>
             <div className={styles.successIcon}>✓</div>
             <h2>Solicitud Recibida</h2>
             <p>Hemos perfilado tu solicitud exitosamente. Un asesor se comunicará contigo a la brevedad para coordinar tu visita.</p>
-            <button className={styles.primaryBtn} onClick={onClose}>Volver al inicio</button>
+            <button className={styles.primaryBtn} onClick={handleClose}>Volver al inicio</button>
           </div>
         ) : (
           <>

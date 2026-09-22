@@ -292,11 +292,13 @@ export default function FaqSection() {
                       <h3 className={styles.questionText}>{faq.q}</h3>
                       <span className={styles.icon}>{isOpen ? '−' : '+'}</span>
                     </div>
-                    <div 
-                      className={styles.answerArea} 
-                      style={{ height: isOpen ? 'auto' : '0px', opacity: isOpen ? 1 : 0, overflow: 'hidden' }}
+                    <div
+                      className={styles.answerArea}
+                      style={{ gridTemplateRows: isOpen ? '1fr' : '0fr', opacity: isOpen ? 1 : 0 }}
                     >
-                      <p className={styles.answerFormatted}>{faq.a}</p>
+                      <div className={styles.answerInner}>
+                        <p className={styles.answerFormatted}>{faq.a}</p>
+                      </div>
                     </div>
                   </div>
                 );

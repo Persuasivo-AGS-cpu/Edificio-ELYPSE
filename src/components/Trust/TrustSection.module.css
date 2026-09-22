@@ -99,6 +99,11 @@
   transform: translateY(-2px);
 }
 
+.primaryBtn:active {
+  transform: scale(0.97);
+  transition: transform 0.1s ease-out;
+}
+
 .imageColumn {
   position: relative;
 }
