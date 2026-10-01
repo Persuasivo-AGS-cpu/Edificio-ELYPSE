@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import styles from "./WizardModal.module.css";
 import { LeadData } from "@/types";
 import { calculateLeadScore } from "@/utils/LeadScoring";
@@ -21,6 +21,7 @@ export default function WizardModal({ onClose, initialStep = 0, initialData = {}
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
+  const honeypotRef = useRef<HTMLInputElement>(null);
 
   const handleClose = () => {
     setIsClosing(true);
@@ -72,7 +73,7 @@ export default function WizardModal({ onClose, initialStep = 0, initialData = {}
       const response = await fetch('/api/leads', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(finalData)
+        body: JSON.stringify({ ...finalData, website: honeypotRef.current?.value ?? '' })
       });
       
       if (response.ok) {
@@ -162,6 +163,16 @@ export default function WizardModal({ onClose, initialStep = 0, initialData = {}
 
               {currentStep === 5 && (
                 <form onSubmit={handleSubmit} className={styles.contactForm}>
+                  <input
+                    ref={honeypotRef}
+                    type="text"
+                    name="website"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    aria-hidden="true"
+                    className={styles.honeypot}
+                    defaultValue=""
+                  />
                   <input required placeholder="Nombre completo" className={styles.input} type="text" onChange={e => setFormData({...formData, name: e.target.value})} />
                   <input required placeholder="Empresa / Negocio" className={styles.input} type="text" onChange={e => setFormData({...formData, company: e.target.value})} />
                   <input required placeholder="Teléfono / WhatsApp" className={styles.input} type="tel" onChange={e => setFormData({...formData, phone: e.target.value})} />

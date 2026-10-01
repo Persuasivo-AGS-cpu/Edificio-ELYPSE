@@ -164,6 +164,7 @@
 
 .contactForm {
   display: flex;
+  position: relative;
   flex-direction: column;
   gap: 1rem;
 }
@@ -279,4 +280,12 @@
   color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: 2rem;
+}
+
+.honeypot {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
