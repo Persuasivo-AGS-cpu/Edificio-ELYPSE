@@ -21,7 +21,7 @@ export default function SpaceSpecsSection() {
             <div className={styles.metricCard}>
               <div className={styles.metricGlow}></div>
               <h3 className={styles.metricTitle}>Amplitud Directiva</h3>
-              <p className={styles.metricValue}>10 - 18m²</p>
+              <p className={styles.metricValue}>~3.5 × 3.5 m</p>
               <p className={styles.metricDesc}>
                 Espacios holgados de uso individual para respirar. Lo suficientemente amplios para trabajar a puerta cerrada y recibir a clientes simultáneamente sin sentir sofoco.
               </p>
@@ -69,7 +69,7 @@ export default function SpaceSpecsSection() {
             />
           </div>
           <p className={styles.cadCaption}>
-            *Renderizado en vivo desde archivo original: <code>DM OFICINAS - DESPLANTE MUROS.pdf</code>
+            Plano de las oficinas.
           </p>
         </div>
 

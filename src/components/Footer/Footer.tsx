@@ -16,8 +16,8 @@ export default function Footer() {
         </div>
         <div className={styles.links}>
           <h4 className={styles.linksTitle}>Edificio Elypse</h4>
-          <a href="#" className={styles.link}>Oficinas Disponibles</a>
-          <a href="#" className={styles.link}>Servicios</a>
+          <a href="#oficinas" className={styles.link}>Oficinas Disponibles</a>
+          <a href="#beneficios" className={styles.link}>Servicios</a>
           <Link href="/aviso-de-privacidad" className={styles.link}>Aviso de Privacidad</Link>
         </div>
       </div>

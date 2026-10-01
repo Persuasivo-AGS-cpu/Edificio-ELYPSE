@@ -3,7 +3,7 @@ import styles from "./TrustSection.module.css";
 
 export default function TrustSection({ onOpenWizard }: { onOpenWizard: () => void }) {
   return (
-    <section id="ubicacion" className={styles.trustSection}>
+    <section className={styles.trustSection}>
       <div className={`container ${styles.container}`}>
         <div className={styles.content}>
           <h2 className={styles.title}>Ubicación corporativa AAA</h2>
@@ -31,7 +31,7 @@ export default function TrustSection({ onOpenWizard }: { onOpenWizard: () => voi
               <span className={styles.check}>✓</span>
               <div>
                 <strong>Disponibilidad Limitada</strong>
-                <p>Únicamente 14 oficinas conforman nuestro complejo. Actualmente tenemos 10 vacantes.</p>
+                <p>Sólo 6 oficinas disponibles.</p>
               </div>
             </div>
           </div>

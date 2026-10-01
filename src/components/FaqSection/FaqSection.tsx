@@ -30,8 +30,8 @@ const faqs = [
   {
     category: "Precios",
     q: "¿Qué incluye la cuota de $12,500 MXN exactamente?",
-    a: "Lo incluye casi todo: Oficina 100% amueblada estilo ejecutivo, consumo de energía eléctrica comercial (CFE), agua, mantenimiento general y de áreas comunes, uso de 2 salas de junta y recepción.",
-    tags: ["incluye", "inclusion", "beneficios", "servicios", "pago", "cfe", "luz", "agua"]
+    a: "Lo incluye casi todo: Oficina 100% amueblada estilo ejecutivo, internet, consumo de energía eléctrica comercial (CFE), agua, mantenimiento general y de áreas comunes, uso de 2 salas de junta y recepción.",
+    tags: ["incluye", "inclusion", "beneficios", "servicios", "pago", "cfe", "luz", "agua", "internet", "wifi"]
   },
   {
     category: "Precios",

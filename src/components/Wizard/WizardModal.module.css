@@ -200,6 +200,11 @@
   text-align: center;
 }
 
+.privacyLink {
+  color: inherit;
+  text-decoration: underline;
+}
+
 .primaryBtn {
   background: var(--accent-gold);
   color: #12151c;
