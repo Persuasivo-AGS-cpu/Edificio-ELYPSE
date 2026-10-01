@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Link from "next/link";
 import styles from "./FinalCTA.module.css";
 import { LeadData } from "@/types";
@@ -9,6 +9,7 @@ export default function FinalCTA() {
   const [formData, setFormData] = useState<Partial<LeadData>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const honeypotRef = useRef<HTMLInputElement>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -33,7 +34,7 @@ export default function FinalCTA() {
       const response = await fetch('/api/leads', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(finalData)
+        body: JSON.stringify({ ...finalData, website: honeypotRef.current?.value ?? '' })
       });
       
       if (response.ok) {
@@ -72,6 +73,16 @@ export default function FinalCTA() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className={styles.contactForm}>
+                <input
+                  ref={honeypotRef}
+                  type="text"
+                  name="website"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                  className={styles.honeypot}
+                  defaultValue=""
+                />
                 <input required placeholder="Nombre completo" className={styles.input} type="text" onChange={e => setFormData({...formData, name: e.target.value})} />
                 <input required placeholder="Empresa / Negocio" className={styles.input} type="text" onChange={e => setFormData({...formData, company: e.target.value})} />
                 <input required placeholder="Teléfono / WhatsApp" className={styles.input} type="tel" onChange={e => setFormData({...formData, phone: e.target.value})} />
