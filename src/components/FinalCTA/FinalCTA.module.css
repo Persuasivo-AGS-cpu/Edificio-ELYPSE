@@ -94,6 +94,11 @@
   text-align: center;
 }
 
+.privacyLink {
+  color: inherit;
+  text-decoration: underline;
+}
+
 .primaryBtn {
   background-color: var(--accent-gold);
   color: #fff;

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useState, useEffect } from "react";
 import styles from "./WizardModal.module.css";
 import { LeadData } from "@/types";
@@ -168,7 +169,7 @@ export default function WizardModal({ onClose, initialStep = 0, initialData = {}
                   <textarea placeholder="Comentarios adicionales" className={styles.textarea} onChange={e => setFormData({...formData, comments: e.target.value})}></textarea>
                   
                   <div className={styles.formFooter}>
-                     <p className={styles.privacyNote}>Al enviar, aceptas nuestro aviso de privacidad.</p>
+                     <p className={styles.privacyNote}>Al enviar, aceptas nuestro <Link href="/aviso-de-privacidad" className={styles.privacyLink}>aviso de privacidad</Link>.</p>
                      <button disabled={isSubmitting} type="submit" className={styles.primaryBtn}>
                        {isSubmitting ? 'Enviando...' : 'Solicitar Información'}
                      </button>

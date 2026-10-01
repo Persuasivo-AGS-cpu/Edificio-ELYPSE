@@ -91,7 +91,6 @@ export default function BenefitsSection() {
           <div className={styles.disclaimerContent}>
             <h4 className={styles.disclaimerTitle}>Importante considerar</h4>
             <ul className={styles.disclaimerList}>
-              <li>Para mantener un entorno enfocado, el servicio de Internet corre por cuenta de cada inquilino de forma privada.</li>
               <li>Nuestros espacios son exclusivamente oficinas privadas, no ofrecemos modalidades de coworking ni escritorios compartidos.</li>
             </ul>
           </div>

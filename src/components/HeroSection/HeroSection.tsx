@@ -2,7 +2,7 @@ import styles from "./HeroSection.module.css";
 
 export default function HeroSection({ onOpenWizard }: { onOpenWizard: (interest?: string) => void }) {
   return (
-    <section className={styles.hero}>
+    <section id="oficinas" className={styles.hero}>
       <video
         autoPlay
         loop

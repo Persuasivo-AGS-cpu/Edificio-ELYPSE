@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import styles from "./FinalCTA.module.css";
 import { LeadData } from "@/types";
 
@@ -78,7 +79,7 @@ export default function FinalCTA() {
                 <textarea placeholder="Comentarios adicionales (opcional)" className={styles.textarea} onChange={e => setFormData({...formData, comments: e.target.value})}></textarea>
                 
                 <div className={styles.formFooter}>
-                   <p className={styles.privacyNote}>Al enviar, aceptas nuestro aviso de privacidad.</p>
+                   <p className={styles.privacyNote}>Al enviar, aceptas nuestro <Link href="/aviso-de-privacidad" className={styles.privacyLink}>aviso de privacidad</Link>.</p>
                    <button disabled={isSubmitting} type="submit" className={styles.primaryBtn}>
                      {isSubmitting ? 'Enviando...' : 'Agendar Visita'}
                    </button>
