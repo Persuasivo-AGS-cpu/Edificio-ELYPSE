@@ -78,3 +78,13 @@
   position: absolute;
   left: -1rem;
 }
+
+.content a {
+  color: var(--accent-gold);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.content a:hover {
+  opacity: 0.85;
+}
