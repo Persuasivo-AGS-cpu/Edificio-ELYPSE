@@ -19,6 +19,7 @@ export default function Footer() {
           <a href="#" className={styles.link}>Oficinas Disponibles</a>
           <a href="#" className={styles.link}>Servicios</a>
           <Link href="/aviso-de-privacidad" className={styles.link}>Aviso de Privacidad</Link>
+          <Link href="/terminos-y-condiciones" className={styles.link}>Términos y Condiciones</Link>
         </div>
       </div>
       <div className={styles.bottomBar}>
